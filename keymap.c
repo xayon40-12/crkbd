@@ -68,9 +68,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                      RGB_HUI, RGB_TOG,   KC_UP, XXXXXXX, KC_PGUP, XXXXXXX,
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                      XXXXXXX, XXXXXXX,   KC_UP, XXXXXXX, KC_PGUP, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,                      RGB_HUD, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, XXXXXXX,
+        KC_F7,   KC_F8,   KC_F9,  KC_F10,  KC_F11,  KC_F12,                      XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_PSCR, KC_SLCT, KC_PAUS,  KC_INS,  KC_DEL, KC_HOME,                       KC_END, KC_VOLD, KC_VOLU, KC_MUTE, KC_MPLY, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -80,11 +80,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX, XXXXXXX,   WH_UP, MS_BTN2, XXXXXXX,                      MS_BTN4, MS_BTN1,   MS_UP, MS_BTN3, XXXXXXX, XXXXXXX,
+      RGB_SAI, RGB_HUI, XXXXXXX,   WH_UP, MS_BTN2, RGB_VAI,                      MS_BTN4, MS_BTN1,   MS_UP, MS_BTN3, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, WH_LEFT, WH_DOWN, WH_RGHT, XXXXXXX,                      MS_BTN5, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX, XXXXXXX,
+      RGB_SAD, RGB_HUD, WH_LEFT, WH_DOWN, WH_RGHT, RGB_VAD,                      MS_BTN5, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, MS_BTN1, MS_BTN2, MS_BTN3, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, RGB_TOG,                      XXXXXXX, MS_BTN1, MS_BTN2, MS_BTN3, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_LSFT, _______,  KC_SPC,     KC_ENT, _______, KC_RSFT
                                       //`--------------------------'  `--------------------------'
