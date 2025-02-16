@@ -41,8 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MS_BTN4 KC_MS_BTN4
 #define MS_BTN5 KC_MS_BTN5
 
-#define LT2_ESC LT(2, KC_ESC)
-#define LT1_TAB LT(1, KC_TAB)
+#define LT2_TAB LT(2, KC_TAB)
+#define LT1_ESC LT(1, KC_ESC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
@@ -53,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,  MT_A_X,  MT_C_C,  MT_G_V,    KC_B,                         KC_N,  MT_G_M, MT_C_CO, MT_A_DO, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX, LT1_TAB,  KC_SPC,   MT_RS_EN, LT2_ESC, XXXXXXX
+                                          XXXXXXX, LT1_ESC,  KC_SPC,   MT_RS_EN, LT2_TAB, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
