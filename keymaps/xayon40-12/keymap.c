@@ -41,6 +41,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MS_BTN4 KC_MS_BTN4
 #define MS_BTN5 KC_MS_BTN5
 
+#define LT2_ESC LT(2, KC_ESC)
+#define LT1_TAB LT(1, KC_TAB)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
@@ -50,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,  MT_A_X,  MT_C_C,  MT_G_V,    KC_B,                         KC_N,  MT_G_M, MT_C_CO, MT_A_DO, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,   MO(1),  KC_SPC,   MT_RS_EN,   MO(2), XXXXXXX
+                                          XXXXXXX, LT1_TAB,  KC_SPC,   MT_RS_EN, LT2_ESC, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -74,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, KC_PSCR, KC_SLCT,  KC_INS,  KC_DEL, KC_HOME,                      KC_PAUS, KC_VOLD, KC_VOLU, KC_MUTE, KC_MPLY, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,   MO(3),  KC_SPC,    XXXXXXX, _______, XXXXXXX
+                                          XXXXXXX,   MO(3), XXXXXXX,    XXXXXXX, _______, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
