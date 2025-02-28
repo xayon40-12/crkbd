@@ -26,6 +26,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MT_C_CO MT(MOD_LCTL,KC_COMM)
 #define MT_A_DO MT(MOD_LALT,KC_DOT)
 #define MT_RS_EN MT(MOD_RSFT,KC_ENT)
+#define MT_LS_SP MT(MOD_LSFT,KC_SPC)
 
 #define WH_UP KC_MS_WH_UP
 #define WH_DOWN KC_MS_WH_DOWN
@@ -53,7 +54,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_Z,  MT_A_X,  MT_C_C,  MT_G_V,    KC_B,                         KC_N,  MT_G_M, MT_C_CO, MT_A_DO, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX, LT1_ESC,  KC_SPC,   MT_RS_EN, LT2_TAB, XXXXXXX
+                                          XXXXXXX, LT1_ESC,MT_LS_SP,   MT_RS_EN, LT2_TAB, XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -63,7 +64,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS,                      KC_PIPE, KC_RCBR, KC_LCBR, KC_UNDS, KC_PLUS, XXXXXXX,
+      // XXXXXXX, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS,                      KC_PIPE, KC_RCBR, KC_LCBR, KC_UNDS, KC_PLUS, XXXXXXX,
+      XXXXXXX, KC_LCBR, KC_RCBR, KC_PIPE, KC_UNDS, KC_PLUS,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, _______, XXXXXXX,    KC_BSPC,   MO(3), XXXXXXX
                                       //`--------------------------'  `--------------------------'
