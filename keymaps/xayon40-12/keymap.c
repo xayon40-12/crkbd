@@ -19,14 +19,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include QMK_KEYBOARD_H
 #include <stdio.h>
 
-#define MT_A_X MT(MOD_LALT,KC_X)
-#define MT_C_C MT(MOD_LCTL,KC_C)
-#define MT_G_V MT(MOD_LGUI,KC_V)
-#define MT_G_M MT(MOD_LGUI,KC_M)
-#define MT_C_CO MT(MOD_LCTL,KC_COMM)
-#define MT_A_DO MT(MOD_LALT,KC_DOT)
-#define MT_RS_EN MT(MOD_RSFT,KC_ENT)
-#define MT_LS_SP MT(MOD_LSFT,KC_SPC)
+#define MT_C_A MT(MOD_LCTL,KC_A)
+#define MT_G_S MT(MOD_LGUI,KC_S)
+#define MT_S_D MT(MOD_LSFT,KC_D)
+#define MT_A_F MT(MOD_LALT,KC_F)
+
+#define MT_A_J MT(MOD_LALT,KC_J)
+#define MT_S_K MT(MOD_RSFT,KC_K)
+#define MT_G_L MT(MOD_LGUI,KC_L)
+#define MT_C_SC MT(MOD_LCTL,KC_SCLN)
+
 
 #define WH_UP KC_MS_WH_UP
 #define WH_DOWN KC_MS_WH_DOWN
@@ -50,11 +52,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, XXXXXXX,
+      XXXXXXX,  MT_C_A,  MT_G_S,  MT_S_D,  MT_A_F,    KC_G,                         KC_H,  MT_A_J,  MT_S_K,  MT_G_L, MT_C_SC, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX,    KC_Z,  MT_A_X,  MT_C_C,  MT_G_V,    KC_B,                         KC_N,  MT_G_M, MT_C_CO, MT_A_DO, KC_SLSH, XXXXXXX,
+      XXXXXXX,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          XXXXXXX,   MO(1),MT_LS_SP,   MT_RS_EN,   MO(2), XXXXXXX
+                                          XXXXXXX,   MO(1),  KC_SPC,     KC_ENT,   MO(2), XXXXXXX
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -64,7 +66,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      // XXXXXXX, KC_MINS, KC_EQL , KC_LBRC, KC_RBRC, KC_BSLS,                      KC_PIPE, KC_RCBR, KC_LCBR, KC_UNDS, KC_PLUS, XXXXXXX,
       XXXXXXX, KC_LCBR, KC_RCBR, KC_PIPE, KC_UNDS, KC_PLUS,                      KC_MINS,  KC_EQL, KC_LBRC, KC_RBRC, KC_BSLS, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           XXXXXXX, _______, XXXXXXX,    KC_BSPC,   MO(3), XXXXXXX
@@ -73,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, XXXXXXX,  KC_ESC,  KC_TAB, XXXXXXX, XXXXXXX,                      XXXXXXX, KC_HOME,   KC_UP,  KC_END, KC_PGUP, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX,  KC_TAB,  KC_ESC, XXXXXXX,                      XXXXXXX, KC_HOME,   KC_UP,  KC_END, KC_PGUP, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX,  KC_GRV, KC_TILD, KC_QUOT, KC_DQUO, XXXXXXX,                      XXXXXXX, KC_LEFT, KC_DOWN, KC_RGHT, KC_PGDN, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
